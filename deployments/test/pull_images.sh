@@ -6,17 +6,17 @@ declare -A image_groups
 image_groups["b63cfcebcc37"]="redis:7.2-alpine
 registry.tuf3i.click/library/redis:7.2-alpine"
 image_groups["413d57cb67bb"]="registry.tuf3i.click/library/postgres:latest"
-image_groups["9d3e8a930cec"]="bitnami/postgresql-repmgr:17
-swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/bitnamilegacy/postgresql-repmgr:17.6.0-debian-12-r2"
-image_groups["f7cd6ccdf2bb"]="bitnami/pgpool:4.6
-swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/bitnami/pgpool:4.6.2-debian-12-r1"
+image_groups["9d3e8a930cec"]="soldevelo/postgresql-repmgr:17
+swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/soldevelo/postgresql-repmgr:17.6.0-debian-12-r0"
+image_groups["f7cd6ccdf2bb"]="soldevelo/pgpool:4.6
+swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/soldevelo/pgpool:4.6.3-debian-12-r0"
 image_groups["ca89cfe76f08"]="registry.tuf3i.click/pgpool/pgpool:latest"
 
 # 原镜像优先
 primary=(
     "registry.tuf3i.click/library/redis:7.2-alpine"
-    "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/bitnamilegacy/postgresql-repmgr:17.6.0-debian-12-r2"
-    "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/bitnami/pgpool:4.6.2-debian-12-r1"
+    "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/soldevelo/postgresql-repmgr:17.6.0-debian-12-r0"
+    "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/soldevelo/pgpool:4.6.3-debian-12-r0"
 )
 
 for image_id in "${!image_groups[@]}"; do

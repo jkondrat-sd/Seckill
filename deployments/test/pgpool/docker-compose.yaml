@@ -1,6 +1,6 @@
 services:
   pg-0:
-    image: bitnami/postgresql-repmgr:17
+    image: soldevelo/postgresql-repmgr:17
     container_name: "pg-0"
     ports:
       - 5433:5432
@@ -24,7 +24,7 @@ services:
       - REPMGR_PORT_NUMBER=5432
     restart: always
   pg-1:
-    image: bitnami/postgresql-repmgr:17
+    image: soldevelo/postgresql-repmgr:17
     container_name: "pg-1"
     ports:
       - 5434:5432
@@ -48,7 +48,7 @@ services:
       - REPMGR_PORT_NUMBER=5432
     restart: always
   pgpool:
-    image: bitnami/pgpool:4.6
+    image: soldevelo/pgpool:4.6
     container_name: "pgpool"
     ports:
       - 5432:5432
